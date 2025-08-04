@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-const postController = require('../')
+const postController = require('../controller/postsController.js')
 
 //Index
 router.get('/', (req, res) => {
