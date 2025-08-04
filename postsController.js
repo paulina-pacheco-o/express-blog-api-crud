@@ -7,7 +7,11 @@ const index = (req, res) => {
 
 //SHOW
 const show = (req, res) => {
+  const id = req.params.id
 
+  const post = post.find(item => item.id === id);
+
+  res.json(post);
 }
 
 //STORE
