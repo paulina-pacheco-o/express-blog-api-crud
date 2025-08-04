@@ -28,7 +28,9 @@ const update = (req, res) => {
 
 //MODIFY
 const modify = (req, res) => {
+  const id = req.params.id
 
+  res.send(`Modifica parziale del post con id ${id}`)
 }
 
 //DESTROY
