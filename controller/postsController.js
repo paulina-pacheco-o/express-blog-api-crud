@@ -35,5 +35,20 @@ const modify = (req, res) => {
 
 //DESTROY
 const destroy = (req, res) => {
+  const id = req.params.id
 
+  const post = post.find(item => item.id === id);
+
+  posts.splice(post.indexOf(), 1);
+
+  res.sendStatus(204);
+}
+
+module.exports = {
+  index,
+  show,
+  store,
+  update,
+  modify,
+  destroy
 }
