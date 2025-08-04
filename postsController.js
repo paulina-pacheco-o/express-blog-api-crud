@@ -21,7 +21,9 @@ const store = (req, res) => {
 
 //UPDATE
 const update = (req, res) => {
+  const id = req.params.id
 
+  res.send(`Modifica totale del post con id ${id}`)
 }
 
 //MODIFY
