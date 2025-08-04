@@ -16,7 +16,7 @@ const show = (req, res) => {
 
 //STORE
 const store = (req, res) => {
-
+  res.send('Creazione di un nuovo post')
 }
 
 //UPDATE
