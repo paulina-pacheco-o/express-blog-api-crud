@@ -15,31 +15,34 @@ app.get('/', (req, res) => {
   console.log('Server del mio blog')
 })
 
-
-
 app.get('/bacheca', (req, res) => {
   const post = [
     {
+      id: 1,
       titolo: "Italia",
       contenuto: "Lorem ipsum dolor",
       img: "/assets/italia.jpg",
       tags: ["italia", "lorem"],
     }, {
+      id: 2,
       titolo: "Spagna",
       contenuto: "Lorem ipsum dolor",
       img: "/assets/spagna.jpg",
       tags: ["spagna", "lorem"],
     }, {
+      id: 3,
       titolo: "Grecia",
       contenuto: "Lorem ipsum dolor",
       img: "/assets/grecia.jpg",
       tags: ["grecia", "lorem"],
     }, {
+      id: 4,
       titolo: "Cuba",
       contenuto: "Lorem ipsum dolor",
       img: "/assets/cuba.jpg",
       tags: ["cuba", "lorem"],
     }, {
+      id: 4,
       titolo: "Thailandia",
       contenuto: "Lorem ipsum dolor",
       img: "/assets/thailandia.jpg",

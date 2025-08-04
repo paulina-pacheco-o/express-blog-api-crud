@@ -1,4 +1,36 @@
-const posts = require('./routers/posts.js');
+const posts = [
+  {
+    id: 1,
+    titolo: "Italia",
+    contenuto: "Lorem ipsum dolor",
+    img: "/assets/italia.jpg",
+    tags: ["italia", "lorem"],
+  }, {
+    id: 2,
+    titolo: "Spagna",
+    contenuto: "Lorem ipsum dolor",
+    img: "/assets/spagna.jpg",
+    tags: ["spagna", "lorem"],
+  }, {
+    id: 3,
+    titolo: "Grecia",
+    contenuto: "Lorem ipsum dolor",
+    img: "/assets/grecia.jpg",
+    tags: ["grecia", "lorem"],
+  }, {
+    id: 4,
+    titolo: "Cuba",
+    contenuto: "Lorem ipsum dolor",
+    img: "/assets/cuba.jpg",
+    tags: ["cuba", "lorem"],
+  }, {
+    id: 4,
+    titolo: "Thailandia",
+    contenuto: "Lorem ipsum dolor",
+    img: "/assets/thailandia.jpg",
+    tags: ["thailandia", "lorem"],
+  }
+];
 
 //INDEX
 const index = (req, res) => {
@@ -9,7 +41,8 @@ const index = (req, res) => {
 const show = (req, res) => {
   const id = req.params.id
 
-  const post = post.find(item => item.id === id);
+  const post = posts.find(item => item.id === id);
+  console.log(id, post);
 
   res.json(post);
 }
@@ -39,7 +72,7 @@ const destroy = (req, res) => {
 
   const post = post.find(item => item.id === id);
 
-  posts.splice(post.indexOf(), 1);
+  posts.splice(post.indexOf(post), 1);
 
   res.sendStatus(204);
 }
