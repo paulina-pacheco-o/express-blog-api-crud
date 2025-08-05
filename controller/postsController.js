@@ -61,6 +61,7 @@ const show = (req, res) => {
 
 //STORE
 const store = (req, res) => {
+  console.log(req.body);
   res.send('Creazione di un nuovo post')
 }
 
@@ -82,9 +83,9 @@ const modify = (req, res) => {
 const destroy = (req, res) => {
   const id = parseInt(req.params.id)
 
-  const post = post.find(item => item.id === id);
+  const post = posts.find(item => item.id === id);
 
-  posts.splice(post.indexOf(post), 1);
+  posts.splice(posts.indexOf(post), 1);
 
   res.sendStatus(204);
 }

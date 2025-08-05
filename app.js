@@ -4,6 +4,8 @@ const app = express();
 
 app.use(express.static('public'))
 
+app.use(express.json());
+
 const port = 3000
 
 const postsRouter = require('./routers/posts.js');
