@@ -46,7 +46,18 @@ const posts = [
 
 //INDEX
 const index = (req, res) => {
-  res.json(posts)
+  //res.json(posts)
+
+  const title = req.query.title;
+
+  let filteredPosts = posts;
+
+  if (title) {
+    filteredPosts = posts.filter(item => item.title.toLowerCase() === title.toLowerCase());
+  }
+
+  res.json(filteredPosts);
+
 }
 
 //SHOW

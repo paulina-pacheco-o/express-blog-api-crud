@@ -1,3 +1,5 @@
+GIORNO 1
+
 Esercizio
 Milestone 1
 Come prima cosa, creiamo un controller per i nostri post, in una cartella controllers. 
@@ -19,6 +21,12 @@ In Show e Destroy, controllare se il parametro si riferisce ad un post esistente
 
 Buon Lavoro e buon divertimento
 
+
+
+
+
+
+GIORNO 2
 
 ### Esercizio
  
@@ -53,3 +61,14 @@ Quelli del giorno prima, se non già fatti
 In Update, controllare se il parametro si riferisce ad un post esistente, in caso contrario, rispondere con uno stato 404 e un messaggio d’errore, sempre in formato JSON.
 
 Buon Lavoro e buon divertimento
+
+
+
+
+
+GIORNO 3
+Esercizio
+Dopo aver completato tutte le operazioni CRUD, completiamo le nostre API inserendo un middleware per la gestione delle rotte non registrate e uno per la gestione degli errori.
+
+Se viene chiamato un endpoint inesistente, un middleware dovrà rispondere un messaggio e uno status appropriato.
+Se viene generato un errore, un middleware si occuperà di rispondere con un messaggio e uno status appropriato.
