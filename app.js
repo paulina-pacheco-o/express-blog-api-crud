@@ -8,6 +8,8 @@ app.use(express.json());
 
 const port = 3000
 
+const errorsHandler = require('./middlewares/errorsHandler.js');
+
 const postsRouter = require('./routers/posts.js');
 console.log(postsRouter)
 
@@ -65,6 +67,8 @@ app.get('/bacheca', (req, res) => {
   ];
   res.json(post)
 })
+
+app.use(errorsHandler);
 
 app.listen(port, () => {
   console.log('Server del mio blog')
